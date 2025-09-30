@@ -9,6 +9,10 @@ public class Gerak : MonoBehaviour
     public bool balik;
     public int pindah;
     Rigidbody2D lompat; //lompat sebagai nama dari RigidBody2D
+    public bool tanah; //Variable Sensor tanah
+    public LayerMask targetLayer; 
+    public Transform deteksitanah;
+    public float jangkauan; 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -18,6 +22,8 @@ public class Gerak : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //sensor tanah
+        tanah = Physics2D.OverlapCircle(deteksitanah.position, jangkauan, targetLayer);
         //Control player
         if (Input.GetKey(KeyCode.D)) //Key D Untuk gerak ke kanan
         {
@@ -30,7 +36,8 @@ public class Gerak : MonoBehaviour
             pindah = 1;
         }
 
-        if (Input.GetKey(KeyCode.Mouse0)) //Mouse0 = klik kiri mouse1 = klik kanan
+        //lompat dengan klik kiri mouse
+        if (tanah==true && Input.GetKey(KeyCode.Mouse0))//Mouse0 = klik kiri mouse1 = klik kanan
         {
             lompat.AddForce(new Vector2(0, kekuatanlompat));
         }
@@ -55,3 +62,5 @@ public class Gerak : MonoBehaviour
         transform.localScale = Player;
     }
 }
+
+
