@@ -12,16 +12,33 @@ public class Gerak : MonoBehaviour
     public bool tanah; //Variable Sensor tanah
     public LayerMask targetLayer; 
     public Transform deteksitanah;
-    public float jangkauan; 
+    public float jangkauan;
+
+    //Animasi
+    Animator anim; //sebagai variable animator
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         lompat = GetComponent<Rigidbody2D>();//inisialisasi rigidbody2D untuk awal lompat
+        anim=GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        //logik untuk animasi
+        if(tanah == false)
+        {
+            anim.SetBool("lompat", true);
+        }
+        else 
+        {
+            anim.SetBool("lompat", false);
+        }
+        
+
+
         //sensor tanah
         tanah = Physics2D.OverlapCircle(deteksitanah.position, jangkauan, targetLayer);
         //Control player
