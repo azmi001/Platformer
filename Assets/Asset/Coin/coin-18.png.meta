@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 0870a53b5dcf270448bfe893fda15c33
+guid: 08f959c68a1e5e64d9b8c28affa1333e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8421370894201121612
-    second: Run__009_0
+      213: -4419841727441338153
+    second: coin-18_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,12 +46,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 415
+  spritePixelsToUnits: 512
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Run__009_0
+      name: coin-18_0
       rect:
         serializedVersion: 2
-        x: 37
-        y: 22
-        width: 375
-        height: 465
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 170
+        y: 1
+        width: 204
+        height: 511
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4b414514ac7412b80800000000000000
-      internalID: -8421370894201121612
+      spriteID: 7d00960cd5199a2c0800000000000000
+      internalID: -4419841727441338153
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: d252915483fcab444988071d84089620
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Run__009_0: -8421370894201121612
+      coin-18_0: -4419841727441338153
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

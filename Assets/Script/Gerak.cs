@@ -36,8 +36,6 @@ public class Gerak : MonoBehaviour
         {
             anim.SetBool("lompat", false);
         }
-        
-
 
         //sensor tanah
         tanah = Physics2D.OverlapCircle(deteksitanah.position, jangkauan, targetLayer);
@@ -46,11 +44,17 @@ public class Gerak : MonoBehaviour
         {
             transform.Translate(Vector2.right * kecepatan * Time.deltaTime);
             pindah = -1;
+            anim.SetBool("Lari", true);//animasi lari
         }
         else if (Input.GetKey(KeyCode.A)) //Key A untuk bergerak ke kiri
         {
             transform.Translate(Vector2.right * -kecepatan * Time.deltaTime);
             pindah = 1;
+            anim.SetBool("Lari", true);//animasi lari
+        }
+        else
+        {
+            anim.SetBool("Lari", false);//tidak berlari
         }
 
         //lompat dengan klik kiri mouse
